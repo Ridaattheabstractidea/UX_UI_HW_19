@@ -82,3 +82,30 @@ $(document).ready(function() {
       currentItem.toggleClass('active');
     });
   });
+
+
+  $(document).ready(function() {
+    $('#toggleButton').click(function() {
+      $('.mySkills').toggleClass('expand');
+      if ($('.mySkills').hasClass('expand')) {
+        $('#toggleButtonLess').show();
+        $(this).hide();
+      } else {
+        $('#toggleButtonLess').hide();
+        $(this).show();
+      }
+    });
+  
+    $('#toggleButtonLess').click(function() {
+      $('.mySkills').toggleClass('expand');
+      $('#toggleButtonLess').hide();
+      $('#toggleButton').show();
+    });
+    
+    // Initially hide the "View Less" button
+    $('#toggleButtonLess').hide();
+  });
+  
+
+//   menu 
+

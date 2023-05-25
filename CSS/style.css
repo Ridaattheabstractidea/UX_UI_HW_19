@@ -1,24 +1,23 @@
 * {
   box-sizing: border-box;
   align-content: center;
+  margin-right: 0px;
 }
 
 body, html {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: auto;
-  width: auto;
+  width: 100%;
   margin: 0;
+  margin-right: 0px;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
   position: sticky;
-  
-
 }
 
 .header {
@@ -27,6 +26,7 @@ body, html {
   width: 100%;
   background-color: #E600A5;
   height: 50px; 
+  margin-right: 0px;
   
 }
 
@@ -40,9 +40,10 @@ body, html {
   flex-direction: row;
   align-items: center;
   padding-left: 10px;
-  padding-right: 25px;
+  padding-right: 0px;
   justify-content:space-between;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  margin-right: 0px;
 }
 .logo {
   display: flex;
@@ -106,7 +107,6 @@ max-width: 600px;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 50px;
 margin-top: 100px;
 margin-bottom: 30px;
 gap: 25px;
@@ -120,12 +120,17 @@ order: 0;
 
 .aboutMe p {
 text-align: center;
+
 }
 
-.profileamge {
-max-width: 100%;
-height: auto;
-padding: 25px;
+.profileImage img {
+width: 300px;
+height: 300px;
+border: 2px solid #E600A5;
+border-radius: 1000px;
+align-items: center;
+margin-top: 100px;
+
 }
 
 
@@ -149,7 +154,9 @@ padding: 25px;
   flex-grow: 0;
   } */
 
-.buttonHoveroff {display: flex;
+.buttonHoveroff {
+  
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 30px;
@@ -248,12 +255,14 @@ padding: 25px;
 /* My Skills Section */
 
 .mySkills {
+  display: flex;
+  flex-direction: column;
   margin-top: 0px;
 
 }
 
-.mySkills h2 {
-  font-size: 24px;
+.mySkills h3 {
+  font-size: 18px !important;
   font-weight: bold;
   margin-bottom: 50px;
 }
@@ -263,18 +272,19 @@ padding: 25px;
   width: 600px;
   justify-content: space-between;
   background-color: #fff;
-  border: 1px solid #E600A5;
+  
   border-radius: 25px;
   padding: 50px;
 }
 
 .flexContainer > div {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 20px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  border: 1px solid #E600A5;
+  border: 0px solid #E600A5;
+  gap: 25px;
 }
 
 .description {
@@ -284,7 +294,83 @@ padding: 25px;
   align-content: center;
   padding: 20px;
   text-align: center;
-  margin-bottom: 25px;
+ 
+}
+
+/* my skills */
+
+.mySkills .flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.mySkills .skill {
+  margin-bottom: 15px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 350px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mySkills .skill.extra {
+  display: none;
+}
+
+.mySkills.expand .skill {
+  opacity: 1;
+}
+
+.mySkills.expand .skill.extra {
+  display: block;
+  opacity: 1;
+}
+
+.mySkills .myButton {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.mySkills.expand .myButton {
+  display: none;
+}
+
+#toggleButton {
+
+  display: flex;
+  align-self: self-end;
+  padding: 10px 30px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #E600A5;
+  color: #E600A5;
+  backdrop-filter: blur(5px);
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  border-radius: 25px;
+
+}
+
+#toggleButtonLess {
+
+  display: flex;
+  align-self: self-end;
+  padding: 10px 30px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #E600A5;
+  color: #E600A5;
+  backdrop-filter: blur(5px);
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  border-radius: 25px;
+
 }
 
 /* My Work Section */
@@ -297,7 +383,11 @@ padding: 25px;
 .myWork h2 {
   font-size: 24px !important;
   font-weight: bold !important;
-  margin-bottom: 50px;
+ 
+}
+
+.myWork p {
+  margin-bottom: 25px;
 }
 
 /* style of the grid */
@@ -316,7 +406,13 @@ padding: 25px;
 
 .workGrid > div {
   background-color: #ffffff;
- 
+}
+
+.workGrid h4 {
+  font-size: 50px !important;
+  text-align: left !important;
+  margin-left: 0px !important;
+  margin-bottom: 25px !important;
 }
 
 .workGrid > div:nth-child(1) {
@@ -331,7 +427,7 @@ padding: 25px;
   border-radius: 25px;
   overflow: hidden;
   margin-left: 50px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);  
  
 }
 
@@ -344,6 +440,7 @@ padding: 25px;
   padding: 50px;
   border: 1px solid #E600A5;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); 
+  gap: 50px!important;
 }
 
 .workGrid > div:nth-child(3) {
@@ -513,131 +610,148 @@ footer ul li {
 
 @media(max-width: 600px) {
 
-  
-  .workGrid 
-    {
-      grid-template-rows: auto auto auto auto auto auto auto;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "image1"
-        "info1"
-        "image2"
-        "info2"
-        "image3"
-        "info3"
-        "viewAll";
-        padding: 10px;
-        margin-bottom: 0px;
-    }
 
-  .workGrid > div:nth-child(1) {
-        border-radius: 25px;
-        padding-bottom: 0px;
-        padding-left: 0%;
-        padding-right: 0%;
-        margin-left: 0px;
-        margin-right: 0px;
-        width: auto;
-        align-items: center;
-        object-fit: cover;
-        max-width: 100%;
-        
-
+.workGrid 
+  {
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "image1"
+    "info1"
+    "image2"
+    "info2"
+    "image3"
+    "info3"
+    "viewAll";
+    padding: 10px;
+    margin-bottom: 0px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .workGrid > div:nth-child(2) {
-        border-radius: 25px;
-        margin-top: 0px;
-        padding-top: 25px;
-        
-        margin-left: 0px;
-        margin-right: 0px;
-        line-height: 305%;
-        width: auto;
-        align-items: center;
-        max-width: 100%;
-        
+.workGrid > div:nth-child(1) {
+    border-radius: 25px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: auto;
+    align-items: center;
+    object-fit: cover;
+    width: 350px;s
+  }
+
+.workGrid > div:nth-child(2) {
+    border-radius: 25px;
+    margin-top: 0px;
+    padding-top: 25px;
+    padding: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 305%;
+    align-items: center;
+    width: 350px;
 }
  
-  .workGrid > div:nth-child(3) {
-        border-radius: 25px;
-        padding-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        width: auto;
-        align-items: center;
-        object-fit: cover;
-        max-width: 100%;
+.workGrid > div:nth-child(3) {
+    border-radius: 25px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: auto;
+    align-items: center;
+    object-fit: cover;
+    width: 350px;
        
 }
 
-  .workGrid > div:nth-child(4) {
-        border-radius: 25px;
-        margin-top: 0px;
-        padding-top: 25px;
-        margin-left: 0px;
-        margin-right: 0px ;
-        line-height: 305%;
-        width: auto;
-        align-items: center;
-        max-width: 100%;
+.workGrid > div:nth-child(4) {
+    border-radius: 25px;
+    margin-top: 0px;
+    padding-top: 25px;
+    padding: 25px;
+    margin-left: 0px;
+    margin-right: 0px ;
+    line-height: 305%;
+    align-items: center;
+    width: 350px;
 }
 
-  .workGrid > div:nth-child(5) {
-        border-radius: 25px;
-        padding-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        width: auto;
-        align-items: center;
-        object-fit: cover;
-        max-width: 100%;
+.workGrid > div:nth-child(5) {
+    border-radius: 25px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: auto;
+    align-items: center;
+    object-fit: cover;
+    width: 350px;
 
 }
 
-  .workGrid > div:nth-child(6) {
-        border-radius: 25px;
-        margin-top: 0px;
-        padding-top: 25px;
-        margin-left: 0px;
-        margin-right: 0px;
-        line-height: 305%;
-        align-items: center;
-        max-width: 100%;
+.workGrid > div:nth-child(6) {
+    border-radius: 25px;
+    margin-top: 0px;
+    padding-top: 25px;
+    padding: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 305%;
+    align-items: center;
+    width: 350px;
     }
-  .flexContainer 
-      {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
+.flexContainer 
+  {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 0px;
+    width: 300px;
   }
 
-  .aboutMe {
-       max-width: 400px;
-       margin: 10px;
-
+.aboutMe 
+  {
+    width: 300px;
+    margin: 0px;
+    background: transparent;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
-  .mySkills {
-    width: 100%;
+.mySkills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-left: 10px;
     margin-right: 10px;
-
+    padding left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    width: 300px;
   }
 
-  footer {
+.skill{
+   width: 300px;
+}
+
+.mySkills h2 {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+footer {
     display: flex;
     flex-direction: column;
     background-color: #e600a5;
     width: 100%;
-    height: 50px;
-    padding: 0;
-
-}
-
-.body {
-  width: auto;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-top: 50px;
 }
 
 .workGrid > div h4 {
@@ -649,22 +763,117 @@ footer ul li {
 }
 
 .header {
+
+  height: auto;
   width: 100%;
-  padding: 25px;
+
 }
 
 .menu {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  margin-bottom: 40px;
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
   font-size: 14px;
-  border-bottom: 1px solid #E600A5;
-  
+  max-width: 100%;
+}
+
+.myProcess {
+ width: 300px;
+ border: 1px solid #E600A5;
+}
+
+.description {
+  font-size: 12px;
+  width: 300px;
+  display: flex;
+  width: 300px;
+}
+
+.myProcessSection {
+  width: 300px;
+} 
+
+p {
+  width: 300px;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.toggle-list {
+  width: 300px !important;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.svg {
+  padding: 0px;
+  margin: 0px;
+}
+
+.workGrid {
+  font-size: 14px;
+  padding: 0px;
+  width: 350px;
+}
+
+.moreAboutMeSection {
+  width: 350px;
+  padding: 0px;
+}
+
+.h2 {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.h3 {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+div.skill {
+  width: 200px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.moreAboutMe {
+  width: 350px !important;
+  border: 1px solid #E600A5;
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 100px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  align-items: center;
+
+}
+
+.contactDetail {
+  font-size: 18px;
+  color: #343434;
+  text-decoration: none;
+  background-color: transparent !important;
+  padding: 10px;
+  border-radius: 25px;
+  align-items: center !important;
+  align-content: center !important;
+  width: 300px;
+
+}
+
+.contactDetailIcon {
+  width: 25px;
+  height: 50  px;
+  border-radius: 100px;
+
 }
 
 }
+
 
 
 
@@ -703,8 +912,11 @@ footer ul li {
   color: #E600A5;
   margin-right: 0px;
   margin-top: 0px;
+  width: auto;
   
 }
+
+
 
 .stepNumber {
   font-family: 'Poppins';
@@ -745,7 +957,6 @@ footer ul li {
 
 .toggle-content {
   display: none;
-  width: 400px;
   text-align: center;
 }
 
@@ -766,6 +977,20 @@ footer ul li {
   align-items: center;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+/* more about me */
+
+.moreAboutMeSection {
+  display:flex;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  gap: 25px;
+}
+
+.moreAboutMeSection img {
+  width: 300px;
 }
 
 
@@ -812,13 +1037,41 @@ h1 {
   }
 
  
-  .title {
+.title {
     font-size:16px!important;
     color:#343434 !important;
   }
 
+
+.moreAboutMe {
+  width: 600px;
+  border: 1px solid #E600A5;
+  border-radius: 25px;
+  padding: 50px;
+  margin-bottom: 100px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  align-items: center;
+
+}
+
+.contactDetail {
+  font-size: 18px;
+  color: #343434;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  align-items: center !important;
+  align-content: center !important
+
+}
+
+.contactDetailIcon {
+  width: 25px;
+  height: 50  px;
+  border-radius: 100px;
+
+}
+
+
  
-.title {
-    font-size:16px!important;
-    color:#343434!important;
-  }
